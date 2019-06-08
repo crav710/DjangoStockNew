@@ -1,0 +1,31 @@
+{% extends "base_genric.html" %}
+
+      
+{% block content %}
+{% load static %}
+  <h1>ALL Stocks INFO Display</h1>
+  <br> 
+  <hr>
+  <h3>Enter the Stock Symbol to fetch Details: </h3>
+  <hr>
+  <form action="" method="post" class="form-inline">
+     {% csrf_token %}
+    <div class="form-group">
+      <table >
+        {{ form.as_table }}
+     </table>
+     </div>
+    <input type="submit" value="Submit" class="btn btn-primary">
+ 
+  </form>
+  <hr>
+  <h3>Graphs</h3>
+  <hr>
+  <h4>LineGraph representing all Stocks</h4>
+  <img src="{% static "images/LineGraph.png" %}" alt="My image" height="700" width="1000">
+  <hr>
+  <h4>Histogram for all stocks</h4>
+  <img src="{% static "images/Histogram.png" %}" alt="My image" height="700" width="1000">
+
+
+{% endblock %}

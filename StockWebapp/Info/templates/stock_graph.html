@@ -1,0 +1,15 @@
+{% extends "base_genric.html" %}
+
+{% block content %}
+{% load static %}
+  <h2>Stock Symbol {{Stock_symbol}} Graph</h2>
+  <hr>
+  <div class="container">
+  
+    <h3>Stock INFO Display</h3>
+    <hr>
+
+    <h5>{{title}}</h5> 
+      <img src="{% static image_path %}" alt="My image"  height="600" width="1000">
+  </div>  
+{% endblock %}

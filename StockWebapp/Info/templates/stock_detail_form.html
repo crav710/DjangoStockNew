@@ -1,0 +1,22 @@
+{% extends "base_genric.html" %}
+
+      
+{% block content %}
+{% load static %}
+  <h1>ADD NEW  Stock INFO FORM</h1>
+  <br> <hr>
+  <h3>Fill the form to add a new stock in the database: </h3>
+  <hr>
+  <form action="" method="post" class="form-inline">
+     {% csrf_token %}
+    <div class="form-group">
+      <table >
+        {{ form.as_table }}
+     </table>
+     </div>
+    <input type="submit" value="Submit" class="btn btn-primary">
+ 
+  </form>
+  <hr>
+
+{% endblock %}

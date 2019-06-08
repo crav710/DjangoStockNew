@@ -1,0 +1,23 @@
+{% extends "base_genric.html" %}
+
+{% block content %}
+
+  <h2>Stock Symbol {{Stock_symbol}} Details</h2>	
+  
+  <div class="container">
+  	<h3>Stock INFO Display</h3>
+  	<table class="table">
+		  {{table_info|safe}}
+	 	 <br>	
+  	</table>
+  </div>
+   
+  <div class="container">
+  		<h3>Stock LOSS Display</h3>
+  	<table class="table">
+  	
+ 		 {{table_loss|safe}}
+  	</table>
+  </div>
+  
+{% endblock %}
